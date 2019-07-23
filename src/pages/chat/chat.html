@@ -4,12 +4,7 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
 
-  <ion-navbar>
-    <ion-title>ChatPage</ion-title>
-  </ion-navbar>
-</ion-header>
 <ion-content>
   <div class="message-wrap">
 
@@ -21,8 +16,8 @@
       <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
       <div class="msg-detail">
         <div class="msg-info">
-          <p>
-            {{msg.userName}}&nbsp;&nbsp;&nbsp;</p>
+        
+           
         </div>
         <div class="msg-content">
           <span class="triangle"></span>
@@ -32,13 +27,13 @@
     </div>
 
   </div>
-</ion-content>
+</ion-content> 
 
 <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
   <div class="input-wrap">
    
-    <textarea #chat_input
-              placeholder="Text Input"
+    <textarea #Msg_input
+              placeholder="enter some text"
               [(ngModel)]="editorMsg"
               (keyup.enter)="sendMsg()"
               (focusin)="focus()">

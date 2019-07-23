@@ -51,8 +51,8 @@ export class ChatserviceProvider {
       this.events.publish('chat:received', mockMsg, Date.now())
     }, Math.random() * 1800)
   }
-  getMsgList(): Observable<ChatMessage[]> {
-    const msgListUrl = 'https://raw.githubusercontent.com/HsuanXyz/ionic3-chat/master/src/assets/mock/msg-list.json';
+  getMessageList(): Observable<ChatMessage[]> {
+    const msgListUrl = 'http://www.mocky.io/v2/5d319b7033000068007ba2d0';
     return this.http.get<any>(msgListUrl)
     .pipe(map(response => response.array.map(msg => ({
       ...msg,
@@ -62,7 +62,7 @@ export class ChatserviceProvider {
 
   sendMsg(msg: ChatMessage) {
     return new Promise(resolve => setTimeout(() => resolve(msg), Math.random() * 1000))
-    .then(() => this.mockNewMsg(msg));
+      .then(() => this.mockNewMsg(msg));
   }
   getUserInfo(): Promise<UserInfo> {
     const userInfo: UserInfo = {

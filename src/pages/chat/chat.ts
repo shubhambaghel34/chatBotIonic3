@@ -17,7 +17,7 @@ import {ChatserviceProvider,ChatMessage,UserInfo} from '../../providers/chatserv
 export class ChatPage {
 
   @ViewChild(Content) content: Content;
-  @ViewChild('chat_input') messageInput: ElementRef;
+  @ViewChild('Msg_input') messageInput: ElementRef;
   msgList: ChatMessage[] = [];
   user: UserInfo;
   toUser: UserInfo;
@@ -35,23 +35,22 @@ export class ChatPage {
     });
   }
   ionViewWillLeave() {
-    // unsubscribe
     this.events.unsubscribe('chat:received');
   }
 
   ionViewDidEnter() {
     //get message list
-    this.getMsg();
+    this.getMessageList();
 
     // Subscribe to received  new message events
     this.events.subscribe('chat:received', msg => {
-      this.pushNewMsg(msg);
+      this.pushMsg(msg);
     })
   }
-  getMsg() {
+  getMessageList() {
     // Get mock message list
     return this.chatService
-      .getMsgList()
+      .getMessageList()
       .subscribe(res => {
 
         this.msgList = res;
@@ -75,7 +74,7 @@ export class ChatPage {
       status: 'pending'
     };
 
-    this.pushNewMsg(newMsg);
+    this.pushMsg(newMsg);
     this.editorMsg = '';
 
     // if (!this.showEmojiPicker) {
@@ -92,7 +91,7 @@ export class ChatPage {
   }
 
 
-  pushNewMsg(msg: ChatMessage) {
+  pushMsg(msg: ChatMessage) {
     const userId = this.user.id,
       toUserId = this.toUser.id;
     // Verify user relationships
@@ -122,7 +121,7 @@ export class ChatPage {
   }
 
   onFocus() {
-    //this.showEmojiPicker = false;
+   
     this.content.resize();
     this.scrollToBottom();
   }
@@ -131,7 +130,7 @@ export class ChatPage {
     const textarea = this.messageInput.nativeElement;
     textarea.scrollTop = textarea.scrollHeight;
   }
-  
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatPage');
   }

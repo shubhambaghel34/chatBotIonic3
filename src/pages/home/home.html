@@ -1,18 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>ChatApplication</ion-title>
+    <ion-buttons right>
+        <button (click)="openChatWindow()">
+            <ion-icon ios="ios-chatboxes" md="md-chatboxes" ></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-list>
-
-    <ion-item (click)="openChat()">
-      <ion-avatar item-left>
-        <img src="">
-      </ion-avatar>
-    <h2>Hancock</h2>
-    <p>If at first you don’t succeed, call it version 1.0</p>
-    </ion-item>
+  <ion-list >
+    <div class="item-content">
+     <img  class="chatimg" src="../../assets/imgs/chatimage.png">
+    </div>
+  
+  
   </ion-list>
+  
 </ion-content>
+<ion-footer>
+    <ion-fab bottom right>
+        <button (click)="openChatPopup()" class="popupclass" ion-fab mini><ion-icon name="chatbubbles"></ion-icon></button>
+        <ion-fab-list  side="top">
+         </ion-fab-list>
+      </ion-fab>
+</ion-footer>

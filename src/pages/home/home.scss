@@ -1,3 +1,22 @@
 page-home {
-
+    .item-content {
+        background-color:#ffffff;
+      }
+      .item .item-content {
+        background-color: transparent !important;
+      }
+      .item-ios {
+        background-color: transparent !important;
+        }
+    .chatimg{
+      height: 70vh;
+      width: auto;
+      margin: auto;
+      display: block;
+    } 
+    .popupclass{
+     background-color: aqua
+   
+    }
+   
 }

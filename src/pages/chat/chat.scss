@@ -1,6 +1,6 @@
 page-chat {
-    ion-content .scroll-content {
-        background-color: #f5f5f5; }
+    // ion-content .scroll-content {
+    //      }
       
       ion-footer {
         box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
@@ -8,7 +8,10 @@ page-chat {
         height: 255px; }
       
       .line-breaker {
-        white-space: pre-line; }
+        white-space: pre-line; 
+       
+    
+    }
       
       .input-wrap {
         padding: 5px;
@@ -16,6 +19,8 @@ page-chat {
         .input-wrap textarea {
           flex: 1;
           border: 0;
+          resize: none;
+          background-color: transparent;
           border-bottom: 1px #387ef5;
           border-style: solid; }
       
@@ -61,7 +66,7 @@ page-chat {
                 transform: rotate(45deg);
                 position: absolute; }
         .message-wrap .message.left .msg-content {
-          background-color: #fff;
+          background-color: #27B082;
           float: left; }
         .message-wrap .message.left .msg-detail {
           padding-left: 60px; }
@@ -84,10 +89,10 @@ page-chat {
           right: 10px;
           top: 50px; }
         .message-wrap .message.right .msg-detail .msg-content {
-          background-color: #387ef5;
+          background-color:#227E81;
           float: right; }
           .message-wrap .message.right .msg-detail .msg-content span.triangle {
-            background-color: #387ef5;
+            background-color: #04436A;
             border-bottom-width: 0;
             border-left-width: 0;
             right: -5px; }
