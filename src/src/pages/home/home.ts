@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { IonicPage, NavParams } from 'ionic-angular';
 import { NavController,ModalController,PopoverController } from 'ionic-angular';
 import { ChatPage } from '../chat/chat';
-
+@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -18,7 +19,7 @@ export class HomePage {
 
 openChatPopup()
 {
-let chatpopup=this.popctrl.create('PopupPage',{},{cssClass:'popupclass'});
+let chatpopup=this.popctrl.create(ChatPage,{});
 chatpopup.present();
 }
 

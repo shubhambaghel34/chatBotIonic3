@@ -77,10 +77,7 @@ export class ChatPage {
     this.pushMsg(newMsg);
     this.editorMsg = '';
 
-    // if (!this.showEmojiPicker) {
-    //   this.focus();
-    // }
-
+    
     this.chatService.sendMsg(newMsg)
       .then(() => {
         let index = this.getMsgIndexById(id);
@@ -94,7 +91,7 @@ export class ChatPage {
   pushMsg(msg: ChatMessage) {
     const userId = this.user.id,
       toUserId = this.toUser.id;
-    // Verify user relationships
+    
     if (msg.userId === userId && msg.toUserId === toUserId) {
       this.msgList.push(msg);
     } else if (msg.toUserId === userId && msg.userId === toUserId) {

@@ -20,12 +20,9 @@
   
 </ion-content>
 <ion-footer>
-    <ion-fab bottom right edge>
-        <button ion-fab mini><ion-icon name="chatbubbles"></ion-icon></button>
+    <ion-fab bottom right>
+        <button (click)="openChatPopup()" class="popupclass" ion-fab mini><ion-icon name="chatbubbles"></ion-icon></button>
         <ion-fab-list  side="top">
-          <button ion-fab (click)="openChatPopup()" class="popupclass"> <ion-icon name="chatbubbles"  ></ion-icon>
-          </button>
-         
-        </ion-fab-list>
+         </ion-fab-list>
       </ion-fab>
 </ion-footer>

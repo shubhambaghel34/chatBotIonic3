@@ -25,8 +25,9 @@ export class UserInfo {
   name?: string;
   avatar?: string;
 }
-export const userAvatar = '../../assets/imgs/logo.png';
-export const toUserAvatar = '../../assets/imgs/chatbot.png';
+
+export const userAvatar = '../../assets/imgs/chatbot.png';
+export const toUserAvatar = '../../assets/imgs/logo.png';
 
 
 @Injectable()
@@ -56,7 +57,7 @@ export class ChatserviceProvider {
     return this.http.get<any>(msgListUrl)
     .pipe(map(response => response.array.map(msg => ({
       ...msg,
-      userAvatar: msg.userAvatar === './assets/user.jpg' ? userAvatar : toUserAvatar
+     userAvatar: msg.userAvatar === './assets/user.jpg' ? userAvatar : toUserAvatar
     }))));
   }
 
