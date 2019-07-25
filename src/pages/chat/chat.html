@@ -5,14 +5,14 @@
   Ionic pages and navigation.
 -->
 
-<ion-content>
+<ion-content >
   <div class="message-wrap">
-
+    <!-- [class.left]=" msg.userId === toUser.id "
+    [class.right]=" msg.userId === user.id " -->
     <div *ngFor="let msg of msgList"
          class="message"
-         [class.left]=" msg.userId === toUser.id "
-         [class.right]=" msg.userId === user.id ">
-      <img class="user-img" [src]="msg.userAvatar" alt="" >
+         >
+      <!-- <img class="user-img" [src]="msg.userAvatar" alt="" > -->
       <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
       <div class="msg-detail">
         <div class="msg-info">
