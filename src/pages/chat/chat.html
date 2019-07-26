@@ -4,23 +4,43 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+<ion-header> 
+<ion-navbar>
+  <ion-buttons left>
+<button ion-button>
+    <ion-icon ios="ios-ionitron" md="md-ionitron" ></ion-icon>
+</button>
+  </ion-buttons>
+    
+    <ion-title >XpMobileApp</ion-title>
+</ion-navbar>
 
-<ion-content>
+  <!-- <ion-toolbar >
+   
+         
+         
+     
+    </ion-toolbar> -->
+</ion-header>
+
+
+<ion-content >
   <div class="message-wrap">
-
+    
     <div *ngFor="let msg of msgList"
          class="message"
-         [class.left]=" msg.userId === toUser.id "
-         [class.right]=" msg.userId === user.id ">
-      <img class="user-img" [src]="msg.userAvatar" alt="" >
-      <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner>
+         [class.left]="msg.type === 'fromuser'"
+        [class.right]="msg.type === 'touser'"
+         >
+      <!-- <img class="user-img" [src]="msg.userAvatar" alt="" > -->
+      <!-- <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner> -->
       <div class="msg-detail">
-        <div class="msg-info">
+        <!-- <div class="msg-info">
         
            
-        </div>
+        </div> -->
         <div class="msg-content">
-          <span class="triangle"></span>
+          <!-- <span class="triangle"></span> -->
           <p class="line-breaker ">{{msg.message}}</p>
         </div>
       </div>
@@ -33,7 +53,7 @@
   <div class="input-wrap">
    
     <textarea #Msg_input
-              placeholder="enter some text"
+              placeholder="Type some message"
               [(ngModel)]="editorMsg"
               (keyup.enter)="sendMsg()"
               (focusin)="focus()">
