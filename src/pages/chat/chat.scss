@@ -1,4 +1,8 @@
 page-chat {
+
+  ion-icon {
+    font-size: 20px; //Preferred size here
+}
   ion-footer {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
     background-color: #fff;
@@ -76,7 +80,7 @@ page-chat {
     float: left;
   }
   .message-wrap .message.left .msg-detail {
-    padding-left: 60px;
+    // padding-left: 60px;
   }
   .message-wrap .message.left .user-img {
     left: 0;
@@ -90,7 +94,7 @@ page-chat {
     left: -5px;
   }
   .message-wrap .message.right .msg-detail {
-    padding-right: 60px;
+    // padding-right: 60px;
   }
   .message-wrap .message.right .msg-detail .msg-info {
     text-align: right;
@@ -104,7 +108,7 @@ page-chat {
     top: 50px;
   }
   .message-wrap .message.right .msg-detail .msg-content {
-    background-color: #227e81;
+    background-color: #DCF8C6;
     float: right;
   }
   .message-wrap .message.right .msg-detail .msg-content span.triangle {

@@ -2,7 +2,7 @@ import { Component,ViewChild,ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Events, Content } from 'ionic-angular';
 import {ChatserviceProvider,ChatMessage,UserInfo} from '../../providers/chatservice/chatservice';
-import{HttpClient} from '@angular/common/http';
+import{HttpClient, HttpParams } from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 
 /**
@@ -28,7 +28,9 @@ export class ChatPage {
   editorMsg = '';
   msg:any[] =[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,  private chatService: ChatserviceProvider, private events:Events,public http:HttpClient) 
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+     private chatService: ChatserviceProvider, private events:Events,
+     public http:HttpClient) 
   {
     this.toUser = {
       id: navParams.get('toUserId'),
@@ -44,20 +46,20 @@ export class ChatPage {
   }
 
   ionViewDidEnter() {
-    //get message list
-    this.getMessageList();
+    // //get message list
+    // this.getMessageList();
 
-    // Subscribe to received  new message events
-    this.events.subscribe('chat:received', msg => {
-      this.pushMsg(msg);
-    })
+    // // Subscribe to received  new message events
+    // this.events.subscribe('chat:received', msg => {
+    //   this.pushMsg(msg);
+    // })
   }
   messageRcv: any;
-  getMessageList() {
-    this.chatService.getMessageList().then(res =>{
-      this.messageRcv = res;
-      this.pushMsg(this.messageRcv);
-    })
+  // getMessageList() {
+  //   this.chatService.getMessageList().then(res =>{
+  //     this.messageRcv = res;
+  //     this.pushMsg(this.messageRcv);
+  //   })
     // Get mock message list
     // return this.chatService
     //   .getMessageList()
@@ -66,55 +68,41 @@ export class ChatPage {
     //     this.msgList = res;
     //     this.scrollToBottom();
     //   });
-  }
-  
+  // }
+  messagesRes:any = {};
   sendMsg() {
     if (!this.editorMsg.trim()) return;
 
     // Mock message
     //const id = Date.now().toString();
     let newMsg: ChatMessage = {
-      // messageId: Date.now().toString(),
-       userId: this.user.id,
-      // // userName: this.user.name,
-      // userAvatar: this.user.avatar,
-       toUserId: this.toUser.id,
-      // time: Date.now(),
-      message: this.editorMsg,
-      status: 'pending'
+      //  userId: this.user.id,
+      //  toUserId: this.toUser.id,
+       message: this.editorMsg,
     };
 
-    this.pushMsg(newMsg);
+    this.pushMsg(newMsg, 'touser');
     this.editorMsg = '';
 
     
-    // this.chatService.sendMsg(newMsg)
-    //   .then(() => {
-    //     let index = this.getMsgIndexById(id);
-    //     if (index !== -1) {
-    //       this.msgList[index].status = 'success';
-    //     }
-    //   })
+    this.chatService.sendMsg(newMsg)
+      .then(response => {
+        this.messagesRes = response;
+        this.pushMsg(this.messagesRes, 'fromuser')
+      })
   }
 
 
-  pushMsg(msg: ChatMessage) {
-    // const userId = this.user.id,
-    //   toUserId = this.toUser.id;
-    
-    // if (msg.userId === userId && msg.toUserId === toUserId) {
-      //  this.msgList.push(msg);
-    // } else if (msg.toUserId === userId && msg.userId === toUserId) {
-    //   this.msgList.push(msg);
-    // }
+  pushMsg(msg: ChatMessage, type: string) {
+    msg['type'] = type;
     this.msgList.push(msg);
     console.log(this.msgList);
     this.scrollToBottom();
   }
 
-  getMsgIndexById(id: string) {
-    return this.msgList.findIndex(e => e.userId === id)
-  }
+  // getMsgIndexById(id: string) {
+  //   return this.msgList.findIndex(e => e.userId === id)
+  // }
 
   scrollToBottom() {
     setTimeout(() => {
@@ -140,12 +128,13 @@ export class ChatPage {
     textarea.scrollTop = textarea.scrollHeight;
   }
 
-  
+
 
   ionViewDidLoad() {
-//   this.http.post('http://172.30.24.54:8080/xiva',{query:'hi'}).subscribe((response) => {
-  
-//     console.log(response);
+//     let params = new HttpParams()
+//     params.append("query", "hi")
+//     this.http.post('http://172.30.24.54:8080/xiva', {query:"hi"}).subscribe((response) => {
+//  console.log(response);
 // });
   }
 

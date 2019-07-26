@@ -13,6 +13,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { ChatserviceProvider } from '../providers/chatservice/chatservice';
 import { ChatPage } from '../pages/chat/chat';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
+import{Http } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { HttpClientModule,HttpClient } from '@angular/common/http';
   ],
   providers: [
     StatusBar,
+    Http,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ChatserviceProvider,HttpClientModule,HttpClient
