@@ -1,14 +1,35 @@
 page-chat {
 
-  ion-icon {
-    font-size: 20px; //Preferred size here
+  
+//   overflow: auto; 
+//   .scroll-content {
+//     overflow: auto;  /* redundant, but just in case */
+//     display: flex; /* redundant, but just in case */
+//     flex-direction: column-reverse;
+// }
+  .popover-md .popover-content {
+    max-height: 40%;
+    overflow: auto;
+    max-width: 50%;
 }
+// .popover{
+//   max-width : 400px;
+//     height:250px;     /* Max Width of the popover (depending on the container!) */
+// }
+  ion-icon {
+    font-size: 30px; //Preferred size here
+  }
   ion-footer {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.11);
     background-color: #fff;
     height: 255px;
   }
 
+  .time {
+    color: #dfdfdf;
+    float: right;
+    font-size: small;
+  }
   .line-breaker {
     white-space: pre-line;
   }
@@ -76,12 +97,12 @@ page-chat {
     position: absolute;
   }
   .message-wrap .message.left .msg-content {
-    background-color: #27b082;
+    background-color: #27b087;
     float: left;
   }
-  .message-wrap .message.left .msg-detail {
-    // padding-left: 60px;
-  }
+  // .message-wrap .message.left .msg-detail {
+  //   // padding-left: 60px;
+  // }
   .message-wrap .message.left .user-img {
     left: 0;
   }
@@ -93,9 +114,9 @@ page-chat {
     border-right-width: 0;
     left: -5px;
   }
-  .message-wrap .message.right .msg-detail {
-    // padding-right: 60px;
-  }
+  // .message-wrap .message.right .msg-detail {
+  //   // padding-right: 60px;
+  // }
   .message-wrap .message.right .msg-detail .msg-info {
     text-align: right;
   }
@@ -108,7 +129,9 @@ page-chat {
     top: 50px;
   }
   .message-wrap .message.right .msg-detail .msg-content {
-    background-color: #DCF8C6;
+    background-color: #a7b5d8;
+    color:#fff;
+    font-size:13px;
     float: right;
   }
   .message-wrap .message.right .msg-detail .msg-content span.triangle {
@@ -118,3 +141,7 @@ page-chat {
     right: -5px;
   }
 }
+.popover{
+  max-width: 50%; // Max Width of the popover (depending on the container!)
+}
+

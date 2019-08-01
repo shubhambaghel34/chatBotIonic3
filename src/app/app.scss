@@ -28,6 +28,20 @@ ion-app{
         }
         }
     }   
+    @media (min-width: 567px) {
+        map, div[map] {
+          width: 95%;
+          height: 425px;
+        }
+      }
+      
+      /* Small devices such as phone */
+      @media (max-width: 567px) {
+        map, div[map] {
+          width: 90%;
+          height: 325px;
+        }
+      }
 }
 // App Global Sass
 // --------------------------------------------------
