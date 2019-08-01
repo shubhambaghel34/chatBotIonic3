@@ -2,27 +2,25 @@
   <ion-navbar>
     <ion-title>ChatApplication</ion-title>
     <ion-buttons right>
-        <button (click)="openChatWindow()">
-            <ion-icon ios="ios-chatboxes" md="md-chatboxes" ></ion-icon>
-        </button>
-      </ion-buttons>
+      <button (click)="openChatWindow()">
+        <ion-icon name="logo-twitch"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  <ion-list >
+  <ion-list>
     <div class="item-content">
-     <img  class="chatimg" src="../../assets/imgs/chatimage.png">
+      <img class="chatimg" src="../../assets/imgs/chatbot.jpg">
     </div>
-  
-  
   </ion-list>
-  
 </ion-content>
 <ion-footer>
-    <ion-fab bottom right>
-        <button (click)="openChatPopup()" class="popupclass" ion-fab mini><ion-icon name="chatbubbles"></ion-icon></button>
-        <ion-fab-list  side="top">
-         </ion-fab-list>
-      </ion-fab>
+  <ion-fab bottom right>
+    <button (click)="openChatPopup()" class="popupclass" color="secondary" ion-fab mini>
+      <ion-icon name="chatbubbles"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+    </ion-fab-list>
+  </ion-fab>
 </ion-footer>
