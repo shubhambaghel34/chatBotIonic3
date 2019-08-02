@@ -15,6 +15,8 @@ import { ChatPage } from '../pages/chat/chat';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
 import{Http } from '@angular/http';
 
+import { ProvidersInfoProvider } from '../providers/providers-info/providers-info';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -40,7 +42,8 @@ import{Http } from '@angular/http';
     Http,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ChatserviceProvider,HttpClientModule,HttpClient
+    ChatserviceProvider,HttpClientModule,HttpClient,
+    ProvidersInfoProvider
   ]
 })
 export class AppModule {}
