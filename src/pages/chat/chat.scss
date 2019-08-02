@@ -100,9 +100,9 @@ page-chat {
     background-color: #27b087;
     float: left;
   }
-  // .message-wrap .message.left .msg-detail {
-  //   // padding-left: 60px;
-  // }
+  .message-wrap .message.left .msg-detail {
+     padding-left: 48px;
+  }
   .message-wrap .message.left .user-img {
     left: 0;
   }
@@ -114,9 +114,9 @@ page-chat {
     border-right-width: 0;
     left: -5px;
   }
-  // .message-wrap .message.right .msg-detail {
-  //   // padding-right: 60px;
-  // }
+  .message-wrap .message.right .msg-detail {
+     padding-right: 48px;
+  }
   .message-wrap .message.right .msg-detail .msg-info {
     text-align: right;
   }
