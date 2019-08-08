@@ -1,11 +1,10 @@
-import { HttpClient,HttpHeaders,HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Events } from 'ionic-angular';
 import { Observable } from 'rxjs/Observable';
-import { map } from 'rxjs/Rx';
-import{Constants} from '../../constants/constants';
-import{Headers,RequestOptions} from '@angular/http';
-
+import { map } from 'rxjs/operators';
+import { Constants } from '../../constants/constants';
+import { Hotelsdetails } from '../../interface/HotelsDetails';
 
 /*
   Generated class for the ChatserviceProvider provider.
@@ -14,62 +13,88 @@ import{Headers,RequestOptions} from '@angular/http';
   and Angular DI.
 */
 export class ChatMessage {
-   message: string;
-   userName: string;
-  useravatar:string;
-  }
+  message: string;
+  userName: string;
+  useravatar: string;
+}
 
 export class UserInfo {
- id:string;
+  id: string;
   name?: string;
 }
+
+
 @Injectable()
 export class ChatserviceProvider {
   objdata: any = [];
-  isloading :boolean;
-  getUserInfo():Promise<UserInfo> {
+  isloading: boolean;
+ public data = {
+    startDate: '2019-08-10',
+    endDate: '2019-08-11',
+    hotelMnemonics: ['ATLBH'],
+  }
+  getUserInfo(): Promise<UserInfo> {
     const userInfo: UserInfo = {
       id: '',
       name: 'User',
-    
-    };
-    return new Promise(resolve => resolve(userInfo));
-  }
 
- 
+    };
+   return new Promise(resolve => resolve(userInfo));
+  }
   constructor(public http: HttpClient, private events: Events) {
     console.log('Hello ChatserviceProvider ');
   }
-  
+ 
   sendMsg(msg: ChatMessage) {
-  this.isloading=true;
-    const msgListUrl = Constants.API_URL;
-    var promise = new Promise((resolve, reject) => {
+    this.isloading = true;
+    const msgListUrl = 'http://demo7806966.mockable.io/api';
+    var promise = new Promise((resolve, _reject) => {
       this.http.post(msgListUrl, { query: msg.message }).subscribe((response) => {
-      this.isloading=false;
         resolve(response);
-      },
-      error =>{
-        console.log(error)
-      })
-      }); 
+      });
+    });
     return promise;
   }
 
- 
+  public headerdata = new HttpHeaders({
+    'Access-Control-Allow-Origin': "*",
+    'Access-Control-Allow-Methods': 'POST',
+    'Access-Control-Allow-Headers':'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+    'Content-Type': 'application/json',
+    'X-IHG-API-KEY': 'Ym5gIH17Fe7WcF9J3gHbtAyoeusJpO2q',
+    'Cache-Control': 'no-cache'
+  });
+  public params = new HttpParams()
+    .set('fieldset', 'rateDetails,rateDetails.policies,rateDetails.bonusRates');
 
-//   catchData(body:Object):Observable<any> {
-    // let bodystring =JSON.stringify(body);
-// let headers =new Headers({'Content-Type':'application/json'});
-// let options =new RequestOptions({headers:Headers});
-// return this.http.post('https://int-api.ihg.com/availability/v2/hotels/offers?fieldset=rateDetails,rateDetails.policies,rateDetails.bonusRates',body,options).pipe(map((res:Response) =>res.json())
-// .catch((error:any) => Observable.throw(error.json().error || 'Server error')));
-   
-//    }
- 
+  httpOptions = {
+    headers: this.headerdata,
+    params: this.params,
+    withCredentials: true
+  };
+  
+  Url = 'https://int-api.ihg.com/availability/v2/hotels/offers';
 
+  public getHotels(postobject: any): Promise<any> {
+    return this.http.post<Hotelsdetails>(this.Url, postobject, {headers: this.headerdata, params: this.params })
+      .toPromise().then(response => {
+        return response = response;
+      })
+    
+  }
 
 }
+
+
+ 
+ 
+   
+    
+  
+
+
+
+
 
 
 
