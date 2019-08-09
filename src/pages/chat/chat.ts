@@ -3,7 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Events, Content } from 'ionic-angular';
 import { Hotelsdetails } from '../../interface/HotelsDetails';
 import { ChatserviceProvider, ChatMessage, UserInfo } from '../../providers/chatservice/chatservice';
-
+import { Observable } from 'rxjs/Observable';
+//import {HttpClient} from '@angular/common/http'
 /**
  * Generated class for the ChatPage page.
  *
@@ -27,7 +28,9 @@ export class ChatPage {
   editorMsg = '';
   msg: any[] = [];
   messagesRes: any = {};
-
+  arr:any[]=[];
+  varb:any[]=[];
+  public items:any
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private chatService: ChatserviceProvider, private events: Events) {
     this.toUser = {
@@ -117,8 +120,16 @@ export class ChatPage {
   ionViewDidLoad() {
     this.chatService.getHotels(this.data).then(response => {
       console.log(response);
-      
+     this.arr=response;
+    //console.log(this.arr);
+      // this.msgList.push(this.arr);
+
     })
+
+    // this.getcardData(this.varb).subscribe(res =>{
+    //   console.log(res);
+    //   this.items=res;
+    // });
     setTimeout(() => {
       this.messageInput.nativeElement.focus();
 
@@ -128,6 +139,13 @@ export class ChatPage {
   }
 
 
+    //url='https://jsonplaceholder.typicode.com/posts'
+  // getcardData(postobject: any): Observable<Hotelsdetails[]>{
+  //  return this.http.post<Hotelsdetails[]>(this.url,postobject,{}).map(response =>{  
+  //    return response;  
+  //  })
+  //   }
+  
 
 
 }
