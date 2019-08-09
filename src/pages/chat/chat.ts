@@ -37,7 +37,7 @@ export class ChatPage {
     this.chatService.getUserInfo()
       .then((res) => {
         this.user = res;
-        console.log('getuserinfo....');
+       
       });
 
 
@@ -54,27 +54,41 @@ export class ChatPage {
     let newMsg: ChatMessage = {
       message: this.editorMsg,
       userName: 'me',
-      useravatar:''
+      useravatar: '',
     };
     this.pushMsg(newMsg, 'touser');
     this.editorMsg = '';
     this.chatService.sendMsg(newMsg)
       .then(response => {
         this.messagesRes = response;
+        if (typeof this.messagesRes.message === 'string') {
+          console.log('String');
+          this.messagesRes['cardView'] = false;
+        } else {
+          console.log('notString');
+          this.messagesRes['cardView'] = true;
+          console.log(this.messagesRes);
+        }
+
         this.pushMsg(this.messagesRes, 'fromuser');
       })
   }
+  // cardView: boolean = false;
   pushMsg(msg: ChatMessage, type: string) {
     msg['type'] = type;
     if (type === 'fromuser') msg.userName = 'bot';
     else if (type === 'touser') msg.userName = 'me';
- if(type === 'fromuser') msg.useravatar='../../assets/imgs/chatbot.png';
- else if(type =='touser')msg.useravatar='../../assets/imgs/chatbot.jpg';
+    if (type === 'fromuser') msg.useravatar = '../../assets/imgs/chatbot.png';
+    else if (type == 'touser') msg.useravatar = '../../assets/imgs/chatbot.jpg';
+    // if (msg.cardview) this.cardView = true;
+    // else this.cardView = false;
     this.msgList.push(msg);
+    console.log(this.msgList);
     this.scrollToBottom();
   }
   scrollToBottom() {
     setTimeout(() => {
+      window.scrollTo(300, 500);
       if (this.content.scrollToBottom) {
         this.content.scrollToBottom();
       }
@@ -101,16 +115,16 @@ export class ChatPage {
     hotelMnemonics: ['ATLBH'],
   }
   ionViewDidLoad() {
-    this.chatService.getHotels(this.data).then(response =>{
+    this.chatService.getHotels(this.data).then(response => {
       console.log(response);
-      console.log('gethotels()...')
+      
     })
     setTimeout(() => {
       this.messageInput.nativeElement.focus();
 
     }, 1000
     );
-    console.log('Focuss evnt fired...');
+   
   }
 
 
