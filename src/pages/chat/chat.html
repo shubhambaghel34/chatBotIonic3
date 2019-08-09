@@ -16,24 +16,44 @@
   </ion-navbar>
 </ion-header>
 
-
 <ion-content>
-  <div class="message-wrap" >
+  <div class="message-wrap">
     <div *ngFor="let msg of msgList" class="message" [class.left]="msg.type === 'fromuser'"
       [class.right]="msg.type === 'touser'">
-      <img class="user-img" [src]="msg.useravatar" alt="" >
-     
-     
-      <!-- <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner> -->
-      <div class="msg-detail">
+      <div *ngIf="!msg.cardView">
+        <img class="user-img" [src]="msg.useravatar" alt="">
+        <!-- <ion-spinner name="dots"></ion-spinner> -->
+        <!-- <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner> -->
+        <div class="msg-detail">
           <div class="msg-info">
-              <p>
-                {{msg.userName}}</p>
-            </div>
-        <div class="msg-content">
-          <p class="line-breaker ">{{msg.message}}</p>
+            <p>
+              {{msg.userName}}</p>
+          </div>
+          <div class="msg-content">
+            <p class="line-breaker ">{{msg.message}}</p>
+          </div>
         </div>
       </div>
+      <ion-card *ngIf="msg.cardView">
+        <ion-card-header>
+          Header
+        </ion-card-header>
+        <ion-card-content>
+          The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+        </ion-card-content>
+      </ion-card>
+      <!-- <ion-card *ngFor="let item of itmes">
+         
+          <ion-card-content>
+            <ion-card-title>
+             {{item.id}}
+              </ion-card-title>
+            <p>
+              The most popular industrial group ever, and largely
+              responsible for bringing the music to a mass audience.
+            </p>
+          </ion-card-content>
+        </ion-card> -->
     </div>
 
   </div>
@@ -42,10 +62,10 @@
 <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">
   <div class="input-wrap">
 
-    <textarea  #Msg_input  placeholder="Type some message" [(ngModel)]="editorMsg" (keyup.enter)="sendMsg()"
+    <textarea #Msg_input placeholder="Type some message" [(ngModel)]="editorMsg" (keyup.enter)="sendMsg()"
       (focusin)="focus()">
 
-   
+
     <textarea #Msg_input
               placeholder="Type a message"
               [(ngModel)]="editorMsg"
@@ -56,6 +76,5 @@
     <button ion-button clear icon-only item-right (click)="sendMsg()">
       <ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>
     </button>
-   
   </div>
 </ion-footer>
