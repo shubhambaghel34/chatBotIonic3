@@ -1,3 +1,4 @@
+import { Weather } from './../../interface/weather';
 import { Component, ViewChild, ElementRef, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Events, Content } from 'ionic-angular';
@@ -19,6 +20,8 @@ import { Observable } from 'rxjs/Observable';
 })
 
 export class ChatPage {
+  questions$: Observable<Hotelsdetails[]>;
+  totalQuestions: any =[];
   displayData: any = [];
   @ViewChild(Content) content: Content;
   @ViewChild('Msg_input') messageInput: ElementRef;
@@ -28,9 +31,9 @@ export class ChatPage {
   editorMsg = '';
   msg: any[] = [];
   messagesRes: any = {};
-  arr:any[]=[];
-  varb:any[]=[];
-  public items:any
+  arr:Observable<Weather[]>;
+  varb: any[] = [];
+  public items: any
   constructor(public navCtrl: NavController, public navParams: NavParams,
     private chatService: ChatserviceProvider, private events: Events) {
     this.toUser = {
@@ -40,7 +43,7 @@ export class ChatPage {
     this.chatService.getUserInfo()
       .then((res) => {
         this.user = res;
-       
+
       });
 
 
@@ -51,6 +54,11 @@ export class ChatPage {
 
   ionViewDidEnter() {
 
+  }
+
+
+  ionViewWillEnter(){
+   
   }
   sendMsg() {
     if (!this.editorMsg.trim()) return;
@@ -118,10 +126,18 @@ export class ChatPage {
     hotelMnemonics: ['ATLBH'],
   }
   ionViewDidLoad() {
+      this.chatService.getData().subscribe(res =>{
+        console.log(res);
+        this.arr= res;
+       //this.msgList.push(res);
+      })
+    console.log('chatservice...');
     this.chatService.getHotels(this.data).then(response => {
-      console.log(response);
-     this.arr=response;
-    //console.log(this.arr);
+     // console.log(response);
+    //  this.arr = response;
+
+      
+      //console.log(this.arr);
       // this.msgList.push(this.arr);
 
     })
@@ -135,17 +151,17 @@ export class ChatPage {
 
     }, 1000
     );
-   
+
   }
 
 
-    //url='https://jsonplaceholder.typicode.com/posts'
+  //url='https://jsonplaceholder.typicode.com/posts'
   // getcardData(postobject: any): Observable<Hotelsdetails[]>{
   //  return this.http.post<Hotelsdetails[]>(this.url,postobject,{}).map(response =>{  
   //    return response;  
   //  })
   //   }
-  
+
 
 
 }
