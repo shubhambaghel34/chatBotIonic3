@@ -1,3 +1,4 @@
+import { Weather, ResultEntity, Responsedto } from './../../interface/weather';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Events } from 'ionic-angular';
@@ -29,6 +30,7 @@ export class UserInfo {
 
 @Injectable()
 export class ChatserviceProvider {
+  public dataUrl: string = "assets/Json/data.json";
   objdata: any = [];
   isloading: boolean;
   baseUrl: any = "/v2/";
@@ -48,8 +50,11 @@ export class ChatserviceProvider {
   }
   constructor(public http: HttpClient, private events: Events) {
     console.log("Hello ChatserviceProvider ");
+   
   }
 
+
+  
   sendMsg(msg: ChatMessage) {
     this.isloading = true;
     const msgListUrl = "http://demo7806966.mockable.io/api";
@@ -86,13 +91,24 @@ export class ChatserviceProvider {
         console.log("responseData", response);
         return (response = response);
       })
-      .catch(this.handleError);
+     .catch(this.handleError);
   }
   private handleError(error: Response | any) {
     console.log(error, error.message);
-    return Promise.reject(error.message || error);
-  }
+     return Promise.reject(error.message || error);
+   }
+ 
+   getData(): Observable<Weather[]> {
+    return this.http.get<Weather[]>(this.dataUrl);
+    
+ }
+
+
+
 }
+
+
+
 
 
 
