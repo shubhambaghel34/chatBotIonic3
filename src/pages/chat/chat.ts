@@ -1,4 +1,4 @@
-import { Weather } from './../../interface/weather';
+import { Weather, Responsedto } from './../../interface/weather';
 import { Component, ViewChild, ElementRef, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Events, Content } from 'ionic-angular';
@@ -29,9 +29,13 @@ export class ChatPage {
   user: UserInfo;
   toUser: UserInfo;
   editorMsg = '';
+  hotelInfo: any;
+  jsdata:any;
+  
+  // label:any='Hotels';
   msg: any[] = [];
   messagesRes: any = {};
-  arr:Observable<Weather[]>;
+  arr:any =[];
   varb: any[] = [];
   public items: any
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -128,7 +132,12 @@ export class ChatPage {
   ionViewDidLoad() {
       this.chatService.getData().subscribe(res =>{
         console.log(res);
-        this.arr= res;
+      
+        this.hotelInfo= res;
+        this.jsdata= this.hotelInfo.responsedto.result;
+        
+        console.log(this.hotelInfo.responsedto.result[0]);
+        
        //this.msgList.push(res);
       })
     console.log('chatservice...');

@@ -18,17 +18,22 @@
 
 <ion-content>
   <div class="message-wrap">
-      <ion-card *ngFor="let a of Weather" >
-         
-          <p >{{a.responsedto}}</p>
+      <ion-card *ngFor="let item of jsdata">
         <ion-card-header>
-         
-          </ion-card-header>
-          <ion-card-content>
-        
-            The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
-          </ion-card-content>
-        </ion-card>
+          {{item.hotelName}}
+        </ion-card-header>
+        <ion-card-content text-left>
+          <ion-row>
+            <label>Address:</label>
+            {{item.address}}
+          </ion-row>
+          <ion-col col-2 text-left>
+            <label text-left>PhoneNumber:</label>
+            {{item.phoneNumber}}
+          </ion-col>
+        </ion-card-content>
+      
+      </ion-card>
     <div *ngFor="let msg of msgList" class="message" [class.left]="msg.type === 'fromuser'"
       [class.right]="msg.type === 'touser'">
       <div *ngIf="!msg.cardView">
