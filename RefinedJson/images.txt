@@ -1,0 +1,85 @@
+hotelCode - LNDOH
+
+<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-london-2532954748-original">
+<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-london-2532954485-original">
+<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-london-2532954494-original">
+
+hotelCode = CMHBI
+
+<img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-columbus-4070445737-original" height="150px" width="200px" alt="Front Desk" title="Front Desk" style="cursor:pointer;" onError="this.onerror=null;this.src='/images/photonotavailable.png';" />
+<img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-columbus-2532792745-original" height="150px" width="200px" alt="Hotel Exterior at Dusk" title="Hotel Exterior at Dusk" style="cursor:pointer;" onError="this.onerror=null;this.src='/images/photonotavailable.png';" />
+<img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-columbus-2532792760-original" height="150px" width="200px" alt="Hotel Exterior at Night" title="Hotel Exterior at Night" style="cursor:pointer;" onError="this.onerror=null;this.src='/images/photonotavailable.png';" />
+<img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-columbus-4070445822-original" height="150px" width="200px" alt="Hotel Lobby" title="Hotel Lobby" style="cursor:pointer;" onError="this.onerror=null;this.src='/images/photonotavailable.png';" />
+<img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-columbus-4070446394-original" height="150px" width="200px" alt="Hotel Lobby" title="Hotel Lobby" style="cursor:pointer;" onError="this.onerror=null;this.src='/images/photonotavailable.png';" />
+<img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-columbus-4070446984-original" height="150px" width="200px" alt="Hotel Lobby" title="Hotel Lobby" style="cursor:pointer;" onError="this.onerror=null;this.src='/images/photonotavailable.png';" />
+
+		
+hotelCode = CMHDO
+
+<a href="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-2944651591-original"><img src="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-2944651591-original" alt="Entrance" /></a>
+<a href="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-2532806003-original"><img src="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-2532806003-original" alt="Conference Center Exterior" /></a>
+<a href="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-2939846512-original"><img src="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-2939846512-original" alt="Hotel Exterior" /></a>
+<a href="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-3647750559-original"><img src="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-3647750559-original" alt="Exterior Hotel" /></a>
+<a href="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-4080595762-original"><img src="http://ihg.scene7.com/is/image/ihg/crowne-plaza-dublin-4080595762-original" alt="Guest Room" /></a>
+
+hotelCode = MYVOH
+
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080584309-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080584309-original" alt="Entrance" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080589309-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080589309-original" alt="Exterior Feature" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080584115-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080584115-original" alt="Front Desk" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-2532268915-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-2532268915-original" alt="Hotel Exterior" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-2532268996-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-2532268996-original" alt="Hotel Exterior" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080590470-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-marysville-4080590470-original" alt="Hotel Lobby" /></a>
+		
+
+hotelCodee = GCTOH
+
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-grove-city-3758388120-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-grove-city-3758388120-original" alt="Hotel Exterior" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-grove-city-3683138620-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-grove-city-3683138620-original" alt="Hotel Lobby" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-grove-city-3683139706-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-grove-city-3683139706-original" alt="Lobby Lounge" /></a>
+
+hotelCode = CMHCW
+
+						<a href="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4045240401-original"><img src="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4045240401-original" alt="Our Candlewood Suites - Columbus|Grove City" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4049598978-original"><img src="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4049598978-original" alt="Our Front Desk" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4045235837-original"><img src="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4045235837-original" alt="Our Candlewood Suites - Columbus/Grove City" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4049600362-original"><img src="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4049600362-original" alt="Hotel Lobby" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4080517433-original"><img src="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4080517433-original" alt="Our Elevator" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4080517279-original"><img src="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4080517279-original" alt="Our Lobby" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4080517247-original"><img src="http://ihg.scene7.com/is/image/ihg/candlewood-suites-grove-city-4080517247-original" alt="Our Lobby" /></a>
+	
+	
+
+hotelCode = ATLID
+
+
+						<a href="https://ihg.scene7.com/is/image/ihg/hotel-indigo-atlanta-3602394000-original"><img src="https://ihg.scene7.com/is/image/ihg/hotel-indigo-atlanta-3602394000-original" alt="Hotel Exterior" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/hotel-indigo-atlanta-3602394140-original"><img src="https://ihg.scene7.com/is/image/ihg/hotel-indigo-atlanta-3602394140-original" alt="Hotel Exterior" /></a>
+
+
+hotelCode = ATLPW
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2806088152-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2806088152-original" alt="Trendsetter of the South, Midtown Atlanta" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837753011-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837753011-original" alt="Hotel Entrance" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2818286687-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2818286687-original" alt="Check In Experience is Simple and Friendly" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-3465319031-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-3465319031-original" alt="Crowne Plaza Atlanta Midtown - Convenient to all points Midtown" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-4033056816-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-4033056816-original" alt="The Crowne Plaza is a prominent feature of the Midtown Skyline." /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837753280-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837753280-original" alt="A welcoming arrival in our Hotel Lobby" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837753320-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837753320-original" alt="Get out of the room and enjoy our versatile Hotel Lobby" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-4173542641-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-4173542641-original" alt="Coming Soon, the new Crowne Plaza Lobby" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-4173542302-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-4173542302-original" alt="Brand New  Crowne Plaza Den" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2818353285-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2818353285-original" alt="There will always be a warm welcome awaiting you." /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837444427-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-2837444427-original" alt="Scenery / Landscape" /></a>
+						<a href="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-3334013857-original"><img src="https://ihg.scene7.com/is/image/ihg/crowne-plaza-atlanta-3334013857-original" alt="Breathtaking Midtown and Downtown Atlanta views from hotel" /></a>
+
+Hotel Code ATLBE
+
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-2697831465-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-2697831465-original" alt="Patio" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-3001608117-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-3001608117-original" alt="Front Desk" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-3001607505-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-3001607505-original" alt="Hotel Exterior" /></a>
+						<a href="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-3348082232-original"><img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-and-suites-atlanta-3348082232-original" alt="Hotel Lobby" /></a>
+
+ESIRE
+					<a href="http://ihg.scene7.com/is/image/ihgqa/regent-atlanta-5056235112-original"><img src="http://ihg.scene7.com/is/image/ihgqa/regent-atlanta-5056235112-original" alt="Exterior Feature" /></a>
+
+
+ATLFX -- NO Image
