@@ -36,8 +36,8 @@ export class ChatserviceProvider {
   baseUrl: any = "/v2/";
   hotelUrl: any = this.baseUrl + "hotels/offers";
   public data = {
-    startDate: "2019-08-10",
-    endDate: "2019-08-11",
+    startDate: "2019-08-14",
+    endDate: "2019-08-15",
     hotelMnemonics: ["ATLBH"]
   };
 
@@ -57,7 +57,7 @@ export class ChatserviceProvider {
   
   sendMsg(msg: ChatMessage) {
     this.isloading = true;
-    const msgListUrl = "http://demo7806966.mockable.io/api";
+    const msgListUrl = "https://demo7806966.mockable.io/api";
     var promise = new Promise((resolve, _reject) => {
       this.http.post(msgListUrl, { query: msg.message }).subscribe(response => {
         resolve(response);

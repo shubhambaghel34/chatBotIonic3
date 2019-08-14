@@ -12,7 +12,7 @@
       </button>
     </ion-buttons>
 
-    <ion-title>Xpanxion Chatbot</ion-title>
+    <ion-title>IHG Chatbot</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -23,15 +23,11 @@
           {{item.hotelName}}
         </ion-card-header>
         <ion-card-content text-left>
-          <ion-row>
-            <label>Address:</label>
-            {{item.address}}
+          <ion-row >
+            <label>Address: {{item.address}}</label>
+            <label text-left>PhoneNumber:{{item.phoneNumber}}</label>
           </ion-row>
-          <ion-col col-2 text-left>
-            <label text-left>PhoneNumber:</label>
-            {{item.phoneNumber}}
-          </ion-col>
-        </ion-card-content>
+          </ion-card-content>
       
       </ion-card>
     <div *ngFor="let msg of msgList" class="message" [class.left]="msg.type === 'fromuser'"
@@ -51,17 +47,21 @@
         </div>
       </div>
      
-      <!-- <ion-card *ngFor="let item of itmes">
-         
-          <ion-card-content>
-            <ion-card-title>
-             {{item.id}}
-              </ion-card-title>
-            <p>
-              The most popular industrial group ever, and largely
-              responsible for bringing the music to a mass audience.
-            </p>
+      <!-- <ion-card *ngFor="let item of jsdata">
+          <ion-card-header>
+            {{item.hotelName}}
+          </ion-card-header>
+          <ion-card-content text-left>
+            <ion-row>
+              <label>Address:</label>
+              {{item.address}}
+            </ion-row>
+            <ion-col col-2 text-left>
+              <label text-left>PhoneNumber:</label>
+              {{item.phoneNumber}}
+            </ion-col>
           </ion-card-content>
+        
         </ion-card> -->
     </div>
 

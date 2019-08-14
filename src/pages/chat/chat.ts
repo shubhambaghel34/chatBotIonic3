@@ -21,7 +21,7 @@ import { Observable } from 'rxjs/Observable';
 
 export class ChatPage {
   questions$: Observable<Hotelsdetails[]>;
-  totalQuestions: any =[];
+  totalQuestions: any = [];
   displayData: any = [];
   @ViewChild(Content) content: Content;
   @ViewChild('Msg_input') messageInput: ElementRef;
@@ -30,12 +30,12 @@ export class ChatPage {
   toUser: UserInfo;
   editorMsg = '';
   hotelInfo: any;
-  jsdata:any;
-  
+  jsdata: any;
+
   // label:any='Hotels';
   msg: any[] = [];
   messagesRes: any = {};
-  arr:any =[];
+  arr: any = [];
   varb: any[] = [];
   public items: any
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -60,9 +60,8 @@ export class ChatPage {
 
   }
 
+  ionViewWillEnter() {
 
-  ionViewWillEnter(){
-   
   }
   sendMsg() {
     if (!this.editorMsg.trim()) return;
@@ -130,31 +129,24 @@ export class ChatPage {
     hotelMnemonics: ['ATLBH'],
   }
   ionViewDidLoad() {
-      this.chatService.getData().subscribe(res =>{
-        console.log(res);
-      
-        this.hotelInfo= res;
-        this.jsdata= this.hotelInfo.responsedto.result;
-        
-        console.log(this.hotelInfo.responsedto.result[0]);
-        
-       //this.msgList.push(res);
-      })
-    console.log('chatservice...');
-    this.chatService.getHotels(this.data).then(response => {
-     // console.log(response);
-    //  this.arr = response;
+    this.chatService.getData().subscribe(res => {
+      console.log(res);
 
-      
-      //console.log(this.arr);
-      // this.msgList.push(this.arr);
+      this.hotelInfo = res;
+      this.jsdata = this.hotelInfo.responsedto.result;
 
+      console.log(this.hotelInfo.responsedto.result[0]);
+
+      //this.msgList.push(res);
     })
+    console.log('chatservice...');
+    // this.chatService.getHotels(this.data).then(response => {
+    // //console.log(this.arr);
+    //   // this.msgList.push(this.arr);
 
-    // this.getcardData(this.varb).subscribe(res =>{
-    //   console.log(res);
-    //   this.items=res;
-    // });
+    // })
+
+
     setTimeout(() => {
       this.messageInput.nativeElement.focus();
 
@@ -164,12 +156,7 @@ export class ChatPage {
   }
 
 
-  //url='https://jsonplaceholder.typicode.com/posts'
-  // getcardData(postobject: any): Observable<Hotelsdetails[]>{
-  //  return this.http.post<Hotelsdetails[]>(this.url,postobject,{}).map(response =>{  
-  //    return response;  
-  //  })
-  //   }
+  
 
 
 
