@@ -75,6 +75,7 @@ export class ChatPage {
     this.chatService.sendMsg(newMsg)
       .then(response => {
         this.messagesRes = response;
+        console.log(this.messagesRes);
         if (typeof this.messagesRes.message === 'string') {
           console.log('String');
           this.messagesRes['cardView'] = false;
@@ -137,7 +138,7 @@ export class ChatPage {
 
       console.log(this.hotelInfo.responsedto.result[0]);
 
-      //this.msgList.push(res);
+    //this.msgList.push(this.jsdata);
     })
     console.log('chatservice...');
     // this.chatService.getHotels(this.data).then(response => {
