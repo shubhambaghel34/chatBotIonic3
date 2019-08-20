@@ -12,31 +12,27 @@
       </button>
     </ion-buttons>
 
-    <ion-title>Xpanxion Chatbot</ion-title>
+    <ion-title>IHG Chatbot</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <div class="message-wrap">
-      <ion-card *ngFor="let item of jsdata">
+      <!-- <ion-card *ngFor="let item of jsdata">
         <ion-card-header>
           {{item.hotelName}}
         </ion-card-header>
         <ion-card-content text-left>
-          <ion-row>
-            <label>Address:</label>
-            {{item.address}}
+          <ion-row >
+            <label>Address: {{item.address}}</label>
+            <label text-left>PhoneNumber:{{item.phoneNumber}}</label>
           </ion-row>
-          <ion-col col-2 text-left>
-            <label text-left>PhoneNumber:</label>
-            {{item.phoneNumber}}
-          </ion-col>
-        </ion-card-content>
+          </ion-card-content>
       
-      </ion-card>
+      </ion-card> -->
     <div *ngFor="let msg of msgList" class="message" [class.left]="msg.type === 'fromuser'"
       [class.right]="msg.type === 'touser'">
-      <div *ngIf="!msg.cardView">
+      <div *ngIf="msg.messageType === 'string'">
         <img class="user-img" [src]="msg.useravatar" alt="">
         <!-- <ion-spinner name="dots"></ion-spinner> -->
         <!-- <ion-spinner name="dots" *ngIf="msg.status === 'pending'"></ion-spinner> -->
@@ -50,19 +46,28 @@
           </div>
         </div>
       </div>
+      <div *ngIf="msg.messageType === 'Middleware_call'">
+        <ion-card *ngFor="let item of jsdata" >
+
+            <ion-row>
+                <ion-col col-auto>
+                    <img src="http://ihg.scene7.com/is/image/ihg/holiday-inn-express-london-2532954748-original" item-left/>
+                </ion-col>
+              </ion-row> 
+          <ion-card-header>
+           
+            {{item.hotelName}}
+          </ion-card-header>
+          <ion-card-content text-left>
+            <ion-row >
+              <label>Address: {{item.address}}</label>
+              <label text-left>PhoneNumber:{{item.phoneNumber}}</label>
+            </ion-row>
+            </ion-card-content>
+        </ion-card>
+      </div>
      
-      <!-- <ion-card *ngFor="let item of itmes">
-         
-          <ion-card-content>
-            <ion-card-title>
-             {{item.id}}
-              </ion-card-title>
-            <p>
-              The most popular industrial group ever, and largely
-              responsible for bringing the music to a mass audience.
-            </p>
-          </ion-card-content>
-        </ion-card> -->
+     
     </div>
 
   </div>

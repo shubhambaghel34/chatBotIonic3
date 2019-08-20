@@ -21,7 +21,7 @@ import { Observable } from 'rxjs/Observable';
 
 export class ChatPage {
   questions$: Observable<Hotelsdetails[]>;
-  totalQuestions: any =[];
+  totalQuestions: any = [];
   displayData: any = [];
   @ViewChild(Content) content: Content;
   @ViewChild('Msg_input') messageInput: ElementRef;
@@ -30,12 +30,12 @@ export class ChatPage {
   toUser: UserInfo;
   editorMsg = '';
   hotelInfo: any;
-  jsdata:any;
-  
+  jsdata: any[] = [];
+ 
   // label:any='Hotels';
   msg: any[] = [];
   messagesRes: any = {};
-  arr:any =[];
+  arr: any = [];
   varb: any[] = [];
   public items: any
   constructor(public navCtrl: NavController, public navParams: NavParams,
@@ -60,9 +60,8 @@ export class ChatPage {
 
   }
 
+  ionViewWillEnter() {
 
-  ionViewWillEnter(){
-   
   }
   sendMsg() {
     if (!this.editorMsg.trim()) return;
@@ -70,20 +69,25 @@ export class ChatPage {
       message: this.editorMsg,
       userName: 'me',
       useravatar: '',
+      messageType: ''
     };
+    newMsg.messageType = 'string';
     this.pushMsg(newMsg, 'touser');
     this.editorMsg = '';
     this.chatService.sendMsg(newMsg)
       .then(response => {
         this.messagesRes = response;
-        if (typeof this.messagesRes.message === 'string') {
-          console.log('String');
-          this.messagesRes['cardView'] = false;
-        } else {
-          console.log('notString');
-          this.messagesRes['cardView'] = true;
-          console.log(this.messagesRes);
-        }
+        console.log(this.messagesRes);
+        // if (typeof this.messagesRes.messageType == 'string') {
+        //   console.log("**********"+this.messagesRes);
+        //   console.log('String');
+        //    this.messagesRes['cardView'] = false;
+        // } else {
+       
+        //  console.log("object:"+this.messagesRes.message);
+        //   this.messagesRes['cardView'] = true;
+        //   console.log(this.messagesRes);
+        // }
 
         this.pushMsg(this.messagesRes, 'fromuser');
       })
@@ -130,31 +134,25 @@ export class ChatPage {
     hotelMnemonics: ['ATLBH'],
   }
   ionViewDidLoad() {
-      this.chatService.getData().subscribe(res =>{
-        console.log(res);
-      
-        this.hotelInfo= res;
-        this.jsdata= this.hotelInfo.responsedto.result;
-        
-        console.log(this.hotelInfo.responsedto.result[0]);
-        
-       //this.msgList.push(res);
-      })
-    console.log('chatservice...');
-    this.chatService.getHotels(this.data).then(response => {
-     // console.log(response);
-    //  this.arr = response;
-
-      
-      //console.log(this.arr);
-      // this.msgList.push(this.arr);
-
-    })
-
-    // this.getcardData(this.varb).subscribe(res =>{
+this.logData();
+    // this.chatService.getData().subscribe(res => {
     //   console.log(res);
-    //   this.items=res;
-    // });
+
+    //   this.hotelInfo = res;
+    //   this.jsdata = this.hotelInfo.responsedto.result;
+
+    //   console.log(this.hotelInfo.responsedto.result[0]);
+
+    // //this.msgList.push(this.jsdata);
+    // })
+    console.log('chatservice...');
+    // this.chatService.getHotels(this.data).then(response => {
+    // //console.log(this.arr);
+    //   // this.msgList.push(this.arr);
+
+    // })
+
+
     setTimeout(() => {
       this.messageInput.nativeElement.focus();
 
@@ -162,14 +160,32 @@ export class ChatPage {
     );
 
   }
+async logData(){
+  try {
+       await this.chatService.getData().subscribe(res => {
+     
+
+      this.hotelInfo = res;
+      console.log(this.hotelInfo.responsedto.result);
+      this.jsdata = this.hotelInfo.responsedto.result;
+
+      console.log('list of hotels' + this.jsdata);
+
+      //this.msgList.push(this.jsdata);
+    })
+  }
+  catch (error) {
+    console.error(error);
+  }
+
+}
 
 
-  //url='https://jsonplaceholder.typicode.com/posts'
-  // getcardData(postobject: any): Observable<Hotelsdetails[]>{
-  //  return this.http.post<Hotelsdetails[]>(this.url,postobject,{}).map(response =>{  
-  //    return response;  
-  //  })
-  //   }
+  
+
+
+
+  
 
 
 

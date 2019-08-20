@@ -1,3 +1,4 @@
+import { London } from './../../interface/London';
 import { Weather, ResultEntity, Responsedto } from './../../interface/weather';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -7,7 +8,9 @@ import { Constants } from '../../constants/constants';
 import { Hotelsdetails } from '../../interface/HotelsDetails';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
-
+import { Http } from '@angular/http';
+import{ Atlanta} from '../../interface/Atlanta';
+import 'rxjs/add/operator/timeout';
 
 /*
   Generated class for the ChatserviceProvider provider.
@@ -20,6 +23,7 @@ export class ChatMessage {
   userName: string;
   useravatar: string;
   cardview?: boolean;
+  messageType?: string;
 }
 
 export class UserInfo {
@@ -33,11 +37,12 @@ export class ChatserviceProvider {
   public dataUrl: string = "assets/Json/data.json";
   objdata: any = [];
   isloading: boolean;
+  arr:any;
   baseUrl: any = "/v2/";
   hotelUrl: any = this.baseUrl + "hotels/offers";
   public data = {
-    startDate: "2019-08-10",
-    endDate: "2019-08-11",
+    startDate: "2019-08-14",
+    endDate: "2019-08-15",
     hotelMnemonics: ["ATLBH"]
   };
 
@@ -57,7 +62,7 @@ export class ChatserviceProvider {
   
   sendMsg(msg: ChatMessage) {
     this.isloading = true;
-    const msgListUrl = "http://demo7806966.mockable.io/api";
+    const msgListUrl = Constants.API_URL;
     var promise = new Promise((resolve, _reject) => {
       this.http.post(msgListUrl, { query: msg.message }).subscribe(response => {
         resolve(response);
@@ -98,9 +103,20 @@ export class ChatserviceProvider {
      return Promise.reject(error.message || error);
    }
  
-   getData(): Observable<Weather[]> {
-    return this.http.get<Weather[]>(this.dataUrl);
+
+// asyncobserables(){
+//   return new Observable(observer =>{
+//     setTimeout(()=>{
+//       observer.next(this.getData);
     
+//     },3000)
+//   })
+// }
+
+
+    getData(): Observable<Weather[]> {
+     return  this.http.get<Weather[]>(this.dataUrl);
+     
  }
 
 
