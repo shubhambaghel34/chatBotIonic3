@@ -1,0 +1,148 @@
+export interface Atlanta {
+    viewInventoryAlternates: string;
+    hotelInfoItemsJsonObj: string;
+    isPermissionForViewOffersMatrixTab: boolean;
+    hotelSearchView: HotelSearchView;
+    employeeRateFeature: boolean;
+    success: boolean;
+    miles: boolean;
+    isPermissionForOffersMatrixAgentCountryDefault: boolean;
+    iahiPermission: boolean;
+    resTypeInRetainedMap: boolean;
+    isFromRateTab: boolean;
+    msgAccess: boolean;
+    addStayVal: boolean;
+    responsedto: Responsedto;
+    searchReqDTO: SearchReqDTO;
+  }
+  export interface HotelSearchView {
+    disableViewBrand: boolean;
+    moreResults: boolean;
+    showHotels: boolean;
+    sendAccess: boolean;
+    searchFlag: number;
+    viewChange: boolean;
+    divVal: number;
+    searchTimeOut: string;
+  }
+  export interface Responsedto {
+    type: string;
+    result?: (ResultEntity)[] | null;
+    override: boolean;
+    msgFNStayDates: boolean;
+    addStay: boolean;
+    fromAlternates: boolean;
+    palfeatureFilterEmptyResult: boolean;
+    requestedLMSPropertySoldOut: boolean;
+    alternateSoldOut: boolean;
+    increaseRadiusSearch: boolean;
+    allHotelSoldOut: boolean;
+    searchType: number;
+    moreResults: boolean;
+    palResults: boolean;
+    viewEnabled: boolean;
+    hotelName: string;
+    columns?: (ColumnsEntity)[] | null;
+    openLeftNotAvlble: boolean;
+  }
+  export interface ResultEntity {
+    available: boolean;
+    stateName: string;
+    restricted: boolean;
+    statusCode: string;
+    lmspropertyFlag: boolean;
+    businessRewardHotel: boolean;
+    pastStay: boolean;
+    macro: boolean;
+    preSell: boolean;
+    activeDate?: string | null;
+    rateRange: string;
+    brandFamily: string;
+    brandName: string;
+    distanceType: string;
+    guestRating: string;
+    tpiComplianceP1: boolean;
+    tpiComplianceP2: boolean;
+    stateCode: string;
+    postalCode: string;
+    phoneNumber: string;
+    countryIsoCode: string;
+    restrictConvGroup: string;
+    lat: number;
+    lng: number;
+    viewSpecificLat: number;
+    viewSpecificLng: number;
+    address: string;
+    region: string;
+    hotelCode: string;
+    city: string;
+    direction: string;
+    distance?: string | null;
+    distanceToPoint?: number | null;
+    brandCode: string;
+    hotelName: string;
+    lowestPrice: number;
+    renovationUIText?: string | null;
+    renovationTextField?: string | null;
+  }
+  export interface ColumnsEntity {
+    property: string;
+    type: string;
+    columnName: string;
+    totalRequired: boolean;
+    stype: string;
+    sproperty: string;
+    salign: string;
+    sortColType: string;
+    scolumnName: string;
+    align: string;
+    columnHeading: string;
+    columnWidth: number;
+    scolumnHeading: string;
+  }
+  export interface SearchReqDTO {
+    type: string;
+    multipleCountrySelected: boolean;
+    businessRewardsFlow: boolean;
+    orsearchPerformed: boolean;
+    hotelLeftOpenFlag: boolean;
+    searchTypeHotelsLeft: number;
+    vdnHotelCodeSearch: boolean;
+    validEGCondition: boolean;
+    carribeanSearch: boolean;
+    searchTypeValue: string;
+    palAlternateSearch: boolean;
+    alternateSearch: boolean;
+    singleDestCountry: boolean;
+    showKimptonHotels: boolean;
+    palSearch: boolean;
+    singleSearchParam: string;
+    freeNightSearch: boolean;
+    citySuggestiveSearch: boolean;
+    sortByDistance: boolean;
+    brandSort: boolean;
+    fromLocWindow: string;
+    iahiPermission: boolean;
+    viewChanged: boolean;
+    exactSearch: boolean;
+    stateMatched: boolean;
+    showRewardNights: boolean;
+    resTypeInRetainedMap: boolean;
+    hotelSearchFromCompare: boolean;
+    guestRoyalAmbassador: boolean;
+    overrideHotelMnemonics?: (null)[] | null;
+    removeHotelDetail: boolean;
+    showAvailability: boolean;
+    modifyResvCall: boolean;
+    searchValue?: (null)[] | null;
+    miles: boolean;
+    viewId: string;
+    radius: number;
+    searchType: number;
+    searchCriteria?: (null)[] | null;
+    citySearchStateCode: string;
+    showHotels: boolean;
+    lat: number;
+    lng: number;
+  }
+  

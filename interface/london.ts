@@ -1,0 +1,40 @@
+export interface London {
+    available: boolean;
+    stateName: string;
+    restricted: boolean;
+    statusCode: string;
+    lmspropertyFlag: boolean;
+    businessRewardHotel: boolean;
+    pastStay: boolean;
+    macro: boolean;
+    preSell: boolean;
+    activeDate: string;
+    rateRange: string;
+    brandFamily: string;
+    brandName: string;
+    distanceType: string;
+    guestRating: string;
+    tpiComplianceP1: boolean;
+    tpiComplianceP2: boolean;
+    stateCode: string;
+    postalCode: string;
+    phoneNumber: string;
+    countryIsoCode: string;
+    restrictConvGroup: string;
+    lat: number;
+    lng: number;
+    viewSpecificLat: number;
+    viewSpecificLng: number;
+    address: string;
+    region: string;
+    hotelCode: string;
+    city: string;
+    direction: string;
+    distance: string;
+    distanceToPoint: number;
+    brandCode: string;
+    hotelName: string;
+    hotelImage:string;
+    lowestPrice: number;
+  }
+  
